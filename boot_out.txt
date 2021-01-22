@@ -1,0 +1,1 @@
+Adafruit CircuitPython 6.1.0 on 2021-01-21; Seeeduino Wio Terminal with samd51p19
