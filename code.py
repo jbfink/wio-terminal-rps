@@ -9,6 +9,7 @@ PRESS2 = DigitalInOut(board.BUTTON_2)
 PRESS1 = DigitalInOut(board.BUTTON_1)
 PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
 USERVALUE = ""
+choices = ["r","p","s"]
 
 def light():
     if PRESS_JOYSTICK.value == False:
@@ -17,6 +18,9 @@ def light():
             board.DISPLAY.brightness = 0
         else:
             board.DISPLAY.brightness = 1
+
+def wiochoose():
+    print(random.choice(choices))
 
 def choose():
     if PRESS3.value == False:
@@ -31,6 +35,9 @@ def choose():
         time.sleep(0.3)
         USERVALUE = "Scissors"
         print(USERVALUE)
+
+#    wiochoose()
+#    the above line currently just spews out choices without waiting. will fix.
 
 while True:
     choose()
