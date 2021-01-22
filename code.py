@@ -11,10 +11,12 @@ PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
 USERVALUE = ""
 
 def light():
-    if board.DISPLAY.brightness == 1:
-        board.DISPLAY.brightness = 0
-    else:
-        board.DISPLAY.brightness = 1
+    if PRESS_JOYSTICK.value == False:
+        time.sleep(0.3)
+        if board.DISPLAY.brightness == 1:
+            board.DISPLAY.brightness = 0
+        else:
+            board.DISPLAY.brightness = 1
 
 def choose():
     if PRESS3.value == False:
@@ -32,7 +34,4 @@ def choose():
 
 while True:
     choose()
-    if PRESS_JOYSTICK.value == False:
-        time.sleep(0.3)
-        light()
-
+    light()
