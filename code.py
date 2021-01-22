@@ -27,17 +27,17 @@ def choose():
     if PRESS3.value == False:
         time.sleep(0.3)
         USERVALUE = "Rock"
-        print(USERVALUE)
+        print("You chose... " + USERVALUE)
         wiochoose()
     if PRESS2.value == False:
         time.sleep(0.3)
         USERVALUE = "Paper"
-        print(USERVALUE)
+        print("You chose... " + USERVALUE)
         wiochoose()
     if PRESS1.value == False:
         time.sleep(0.3)
         USERVALUE = "Scissors"
-        print(USERVALUE)
+        print("You chose... " + USERVALUE)
         wiochoose()
 
 #    wiochoose()
