@@ -40,8 +40,6 @@ def choose():
         print("You chose... " + USERVALUE)
         wiochoose()
 
-#    wiochoose()
-#    the above line currently just spews out choices without waiting. will fix.
 
 while True:
     choose()
