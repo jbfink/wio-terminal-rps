@@ -41,6 +41,9 @@ def choose():
         wiochoose()
 
 
+def adjudicate(choice1,choice2):
+    "Who wins?"
+
 while True:
     choose()
     light()
