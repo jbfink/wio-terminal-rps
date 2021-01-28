@@ -9,6 +9,7 @@ PRESS2 = DigitalInOut(board.BUTTON_2)
 PRESS1 = DigitalInOut(board.BUTTON_1)
 PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
 USERVALUE = ""
+wioChoice = ""
 choices = ["Rock","Paper","Scissors"]
 
 def light():
@@ -22,6 +23,11 @@ def light():
 def wiochoose():
     wioChoice = random.choice(choices)
     print("I choose... " + wioChoice + "!")
+#    return wioChoice
+
+def choosePrint(choice1):
+    while choice1 != "":
+        print(choice1)
 
 def choose():
     if PRESS3.value == False:
@@ -29,16 +35,21 @@ def choose():
         USERVALUE = "Rock"
         print("You chose... " + USERVALUE)
         wiochoose()
+        return USERVALUE
+
     if PRESS2.value == False:
         time.sleep(0.3)
         USERVALUE = "Paper"
         print("You chose... " + USERVALUE)
         wiochoose()
+        return USERVALUE
     if PRESS1.value == False:
         time.sleep(0.3)
         USERVALUE = "Scissors"
         print("You chose... " + USERVALUE)
         wiochoose()
+        return USERVALUE
+
 
 
 def adjudicate(choice1,choice2):
@@ -46,4 +57,5 @@ def adjudicate(choice1,choice2):
 
 while True:
     choose()
+    #choosePrint(USERVALUE)
     light()
