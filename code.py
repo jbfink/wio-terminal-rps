@@ -20,7 +20,6 @@ def light():
 
 def returnButton():
     global button
-    button = "None"
     if PRESS3.value == False:
         time.sleep(0.3)
         button = "button 3"
