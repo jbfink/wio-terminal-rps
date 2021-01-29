@@ -33,22 +33,17 @@ def returnButton():
 
     if PRESS1.value == False:
         time.sleep(0.3)
-        USERVALUE = "Scissors"
-        print("You chose... " + USERVALUE)
-        wiochoose()
-        return USERVALUE
+        button = "button 1"
+        return button
 
 
-
-def adjudicate(choice1,choice2):
-    "Who wins?"
 
 while True:
-#    choose()
+    #    choose()
     #choosePrint(USERVALUE)
+    returnButton()
     while button != "None":
         print(button)
+        break
     button = "None"
-
-    returnButton()
     light()
