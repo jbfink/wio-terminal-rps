@@ -10,6 +10,10 @@ PRESS1 = DigitalInOut(board.BUTTON_1)
 PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
 userChoice = "None"
 wioChoice = ""
+wins = ""
+losses = ""
+ties = ""
+
 choices = ["Rock","Paper","Scissors"]
 
 def light():
