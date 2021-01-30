@@ -10,9 +10,9 @@ PRESS1 = DigitalInOut(board.BUTTON_1)
 PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
 userChoice = "None"
 wioChoice = ""
-wins = ""
-losses = ""
-ties = ""
+wins = 0
+losses = 0
+ties = 0 
 
 choices = ["Rock","Paper","Scissors"]
 
@@ -54,6 +54,7 @@ def printButton(userChoice):
     print("You chose...." + userChoice + "!")
     
 def adjudicate(choice1,choice2):
+    global wins,losses,ties
     win = "YOU WIN OK!"
     lose = "YOU LOSE OK!"
     tie = "YOU TIE OK!"
@@ -61,22 +62,40 @@ def adjudicate(choice1,choice2):
     print("Go! The game is " + choice1 + " vs. " + choice2 + "!")
     if choice1 == "Rock" and choice2 == "Scissors":
         print(win)
+        wins += 1
+
     if choice1 == "Rock" and choice2 == "Paper":
         print(lose)
+        losses += 1
+
     if choice1 == "Rock" and choice2 == "Rock":
         print(tie)
+        ties += 1
+
     if choice1 == "Paper" and choice2 == "Rock":
         print(win)
+        wins += 1
+
     if choice1 == "Paper" and choice2 == "Scissors":
         print(lose)
+        losses += 1
+
     if choice1 == "Paper" and choice2 == "Paper":
         print(tie)
+        ties += 1
+
     if choice1 == "Scissors" and choice2 == "Paper":
         print(win)
+        wins += 1
+
     if choice1 == "Scissors" and choice2 == "Rock":
         print(lose)
+        losses +=1
+
     if choice1 == "Scissors" and choice2 == "Scissors":
         print(tie)
+        ties += 1
+    print("WINS: " + str(wins) + "  LOSSES: " + str(losses) + "  TIES: " + str(ties))
 
 while True:
     returnChoice()
