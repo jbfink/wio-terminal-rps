@@ -5,5 +5,6 @@ Assuming you have a Wio Terminal with Circuit Python installed, drag code.py to 
 TODO:
 
 Make it graphical.
+
 Other?
 
