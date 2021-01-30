@@ -49,6 +49,8 @@ def returnWio():
 def printButton(userChoice):
     print("You chose...." + userChoice + "!")
     
+def ajudicate(choice1,choice2):
+    pass
 
 while True:
     returnChoice()
