@@ -103,6 +103,7 @@ while True:
         printButton(userChoice)
         returnWio()
         adjudicate(userChoice,wioChoice)
+        print("----------")
         break
     userChoice = "None"
     light()
