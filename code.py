@@ -22,25 +22,27 @@ def returnButton():
     global button
     if PRESS3.value == False:
         time.sleep(0.3)
-        button = "button 3"
+        button = "Rock"
         return button
 
     if PRESS2.value == False:
         time.sleep(0.3)
-        button = "button 2"
+        button = "Paper"
         return button
 
     if PRESS1.value == False:
         time.sleep(0.3)
-        button = "button 1"
+        button = "Rock"
         return button
 
-
+def printButton(button):
+    print("You chose...." + button + "!")
+    
 
 while True:
     returnButton()
     while button != "None":
-        print(button)
+        printButton(button)
         break
     button = "None"
     light()
