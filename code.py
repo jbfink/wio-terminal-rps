@@ -40,7 +40,10 @@ def returnChoice():
 
 def returnWio():
     global wioChoice
-    pass
+    wioChoice = random.choice(choices)
+    print("I choose... " + wioChoice + "!")
+    return wioChoice
+
  
 
 def printButton(userChoice):
@@ -51,6 +54,7 @@ while True:
     returnChoice()
     while userChoice != "None":
         printButton(userChoice)
+        returnWio()
         break
     userChoice = "None"
     light()
