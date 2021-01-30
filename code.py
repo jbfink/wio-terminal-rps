@@ -38,6 +38,11 @@ def returnChoice():
         userChoice = "Rock"
         return userChoice
 
+def returnWio():
+    global wioChoice
+    pass
+ 
+
 def printButton(userChoice):
     print("You chose...." + userChoice + "!")
     
