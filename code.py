@@ -53,14 +53,15 @@ def returnWio():
 def printButton(userChoice):
     print("You chose...." + userChoice + "!")
     
-def ajudicate(choice1,choice2):
-    pass
+def adjudicate(choice1,choice2):
+    print("Go! The game is " + choice1 + " vs. " + choice2 + "!")
 
 while True:
     returnChoice()
     while userChoice != "None":
         printButton(userChoice)
         returnWio()
+        adjudicate(userChoice,wioChoice)
         break
     userChoice = "None"
     light()
