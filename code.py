@@ -8,7 +8,10 @@ PRESS3 = DigitalInOut(board.BUTTON_3)
 PRESS2 = DigitalInOut(board.BUTTON_2)
 PRESS1 = DigitalInOut(board.BUTTON_1)
 PRESS_JOYSTICK = DigitalInOut(board.SWITCH_PRESS)
-button = "None"
+userChoice = "None"
+wioChoice = ""
+choices = ["Rock","Paper","Scissors"]
+
 def light():
     if PRESS_JOYSTICK.value == False:
         time.sleep(0.3)
@@ -18,31 +21,31 @@ def light():
             board.DISPLAY.brightness = 1
 
 
-def returnButton():
-    global button
+def returnChoice():
+    global userChoice 
     if PRESS3.value == False:
         time.sleep(0.3)
-        button = "Rock"
-        return button
+        userChoice = "Rock"
+        return userChoice
 
     if PRESS2.value == False:
         time.sleep(0.3)
-        button = "Paper"
-        return button
+        userChoice = "Paper"
+        return userChoice
 
     if PRESS1.value == False:
         time.sleep(0.3)
-        button = "Rock"
-        return button
+        userChoice = "Rock"
+        return userChoice
 
-def printButton(button):
-    print("You chose...." + button + "!")
+def printButton(userChoice):
+    print("You chose...." + userChoice + "!")
     
 
 while True:
-    returnButton()
-    while button != "None":
-        printButton(button)
+    returnChoice()
+    while userChoice != "None":
+        printButton(userChoice)
         break
-    button = "None"
+    userChoice = "None"
     light()
