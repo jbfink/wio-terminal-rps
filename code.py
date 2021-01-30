@@ -35,7 +35,7 @@ def returnChoice():
 
     if PRESS1.value == False:
         time.sleep(0.3)
-        userChoice = "Rock"
+        userChoice = "Scissors"
         return userChoice
 
 def returnWio():
