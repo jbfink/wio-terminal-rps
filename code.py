@@ -54,7 +54,29 @@ def printButton(userChoice):
     print("You chose...." + userChoice + "!")
     
 def adjudicate(choice1,choice2):
+    win = "YOU WIN OK!"
+    lose = "YOU LOSE OK!"
+    tie = "YOU TIE OK!"
+
     print("Go! The game is " + choice1 + " vs. " + choice2 + "!")
+    if choice1 == "Rock" and choice2 == "Scissors":
+        print(win)
+    if choice1 == "Rock" and choice2 == "Paper":
+        print(lose)
+    if choice1 == "Rock" and choice2 == "Rock":
+        print(tie)
+    if choice1 == "Paper" and choice2 == "Rock":
+        print(win)
+    if choice1 == "Paper" and choice2 == "Scissors":
+        print(lose)
+    if choice1 == "Paper" and choice2 == "Paper":
+        print(tie)
+    if choice1 == "Scissors" and choice2 == "Paper":
+        print(win)
+    if choice1 == "Scissors" and choice2 == "Rock":
+        print(lose)
+    if choice1 == "Scissors" and choice2 == "Scissors":
+        print(tie)
 
 while True:
     returnChoice()
