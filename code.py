@@ -38,8 +38,6 @@ def returnButton():
 
 
 while True:
-    #    choose()
-    #choosePrint(USERVALUE)
     returnButton()
     while button != "None":
         print(button)
